@@ -56,7 +56,7 @@ class ToDoItem extends StatelessWidget {
                 color: Colors.redAccent,
               ),
               onPressed: () {
-                print("delete btn clicked ");
+               // print("delete btn clicked ");
                 onDeleteItem(todo.id);
               },
             ),
