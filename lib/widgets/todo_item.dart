@@ -41,24 +41,26 @@ class ToDoItem extends StatelessWidget {
             decoration: todo.isDone ? TextDecoration.lineThrough : null,
           ),
         ),
-        trailing: Container(
-          padding: EdgeInsets.all(0),
-          margin: EdgeInsets.symmetric(vertical: 12),
-          height: 35,
-          width: 35,
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(5),
-          ),
-          child: IconButton(
-            color: tdRed,
-            iconSize: 18,
-            icon: Icon(Icons.delete),
-            onPressed: () {
-              // print('Clicked on delete icon');
-              onDeleteItem(todo.id);
-            },
-          ),
+       trailing: Wrap(
+          spacing: -16,
+          children: [
+            IconButton(
+              icon: const Icon(Icons.edit),
+              onPressed: () {
+                // print('Clicked on edit icon');
+              },
+            ),
+            IconButton(
+              icon: const Icon(
+                Icons.delete,
+                color: Colors.redAccent,
+              ),
+              onPressed: () {
+                print("delete btn clicked ");
+                onDeleteItem(todo.id);
+              },
+            ),
+          ],
         ),
       ),
     );
