@@ -47,7 +47,7 @@ class ToDoItem extends StatelessWidget {
             IconButton(
               icon: const Icon(Icons.edit),
               onPressed: () {
-                // print('Clicked on edit icon');
+                 print('Clicked on edit icon');
               },
             ),
             IconButton(
